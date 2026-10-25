@@ -6,7 +6,7 @@ var time_survived := 0.0
 var running := false
 
 func reset() -> void:
-	current_color  = randi() % GameColors.COUNT
+	current_color  = randi() % GameColors.count()
 	next_color = current_color
 	time_survived = 0.0
 	running = true

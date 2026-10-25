@@ -16,6 +16,7 @@ const VERT_FRAMES: int = 6
 
 const TILE_COLUMNS: int = 3
 const TILE_ROWS: int = 2
+const TILE_INSET: float = 3
 
 const TILE_CELL: Array[int] = [3, 4, 0, 1, 2, 5]
 
@@ -48,7 +49,13 @@ func get_tile_texture(index: int) -> Texture2D:
 	var h: float = sheet.get_height() / float(TILE_ROWS)
 	var atlas := AtlasTexture.new()
 	atlas.atlas = sheet
-	atlas.region = Rect2((cell % TILE_COLUMNS) * w, (cell / TILE_COLUMNS) * h, w, h)
+	atlas.region = Rect2(
+		(cell % TILE_COLUMNS) * w + TILE_INSET, 
+		(cell / TILE_COLUMNS) * h + TILE_INSET,
+		w - TILE_INSET * 2,
+		h - TILE_INSET * 2
+		)
+	
 	_cache[key] = atlas
 	return atlas
 	
