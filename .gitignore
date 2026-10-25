@@ -1,3 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+events.gd
+game_colors.gd
+game_state.gd
