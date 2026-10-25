@@ -25,6 +25,10 @@ GameState="*uid://bsrvdo1p6h4bp"
 window/stretch/mode="viewport"
 window/stretch/aspect="expand"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
 [input]
 
 left={
