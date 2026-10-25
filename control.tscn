@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cln8maffmky8l" path="res://assets/greenbar (3).png" id="1_62e2m"]
 [ext_resource type="Texture2D" uid="uid://cfxrhjlbg20cx" path="res://assets/greenbar (2).png" id="2_qtu10"]
+[ext_resource type="Script" uid="uid://deahais55yvq3" path="res://label.gd" id="3_qtu10"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_b2p8l"]
 atlas = ExtResource("1_62e2m")
@@ -29,3 +30,17 @@ value = 100.0
 texture_under = SubResource("AtlasTexture_b2p8l")
 texture_progress = SubResource("AtlasTexture_be4hw")
 texture_progress_offset = Vector2(8, 0)
+
+[node name="Label" type="Label" parent="." unique_id=168569105]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 18.0
+offset_right = 71.0
+offset_bottom = 41.0
+text = "03:00"
+script = ExtResource("3_qtu10")
+
+[node name="Timer" type="Timer" parent="Label" unique_id=1328264535]
+wait_time = 180.0
+one_shot = true
+autostart = true
