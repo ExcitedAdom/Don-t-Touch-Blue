@@ -31,8 +31,8 @@ func get_color(index: int) -> Color:
 func get_color_name(index: int) -> String:
 	return NAMES[index % NAMES.size()]
 
-func get_title_texture(index: int) -> Texture2D:
-	var key := "tile_%d" % index
+func get_tile_texture(index: int) -> Texture2D:
+  var key := "tile_%d" % index
 	if _cache.has(key):
 		return _cache[key]
 	var sheet := _load_tex(TILE_SHEET_PATH)
