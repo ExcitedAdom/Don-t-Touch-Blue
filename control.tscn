@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://f6e1sgfl0vfy"]
+
+[ext_resource type="Texture2D" uid="uid://cln8maffmky8l" path="res://assets/greenbar (3).png" id="1_62e2m"]
+[ext_resource type="Texture2D" uid="uid://cfxrhjlbg20cx" path="res://assets/greenbar (2).png" id="2_qtu10"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2p8l"]
+atlas = ExtResource("1_62e2m")
+region = Rect2(10, 52, 108, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_be4hw"]
+atlas = ExtResource("2_qtu10")
+region = Rect2(18, 37, 100, 10)
+
+[node name="Control" type="Control" unique_id=301393839]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=31810322]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 161.0
+offset_bottom = 157.0
+value = 100.0
+texture_under = SubResource("AtlasTexture_b2p8l")
+texture_progress = SubResource("AtlasTexture_be4hw")
+texture_progress_offset = Vector2(8, 0)
