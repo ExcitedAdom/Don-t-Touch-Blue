@@ -1,8 +1,8 @@
 extends Node2D
 
-const Cols := 14
-const Rows := 8
-const Tile := 80
+const Cols := 12
+const Rows := 6
+const Tile := 60
 const Shuffle_Interval := 10.0
 var shuffle_timer := 0.0
 
@@ -13,8 +13,14 @@ var grid: Array = []
 func _ready() -> void:
 	randomize()
 	generate()
+	center_on_screen()
+	get_viewport().size_changed.connect(center_on_screen)
 	Events.color_changed.connect(_on_color_changed)
 	GameState.reset()
+
+func center_on_screen() -> void:
+	var screen := get_viewport_rect().size
+	position = ((screen - get_size()) / 2.0).floor()
 
 func generate() -> void:
 	grid.clear()
