@@ -32,7 +32,7 @@ func get_color_name(index: int) -> String:
 	return NAMES[index % NAMES.size()]
 
 func get_tile_texture(index: int) -> Texture2D:
-  var key := "tile_%d" % index
+	var key := "tile_%d" % index
 	if _cache.has(key):
 		return _cache[key]
 	var sheet := _load_tex(TILE_SHEET_PATH)
