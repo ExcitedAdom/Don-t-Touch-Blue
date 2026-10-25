@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Don't Touch Blue"
+run/main_scene="uid://b22icdi5d8psg"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
