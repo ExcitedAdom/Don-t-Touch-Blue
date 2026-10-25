@@ -1,16 +1,16 @@
 extends Node
 
+const NAMES: Array[String] = ["blue", "green", "red", "orange", "yellow", "brown"]
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+const COLORS: Array[Color] = [
+	Color("0000ff"), Color("00c800"), Color("ff0000"),
+	Color("ff8800"), Color("ffff00"), Color("663300"),
+]
 
+const TILE_SHEET_PATH: String = "res://assets/block tilest.png"
+const PLAYER_SIDE_PATH: String = "res://assets/emz_rotate_left and right_%s.png"
+const PLAYER_VERT_PATH: String = "res://assets/emz_rotate_up and down_%s.png"
 
-<<<<<<< Updated upstream
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-=======
 const SIDE_FRAMES: int = 4
 const VERT_FRAMES: int = 6
 
@@ -32,7 +32,7 @@ func get_color_name(index: int) -> String:
 	return NAMES[index % NAMES.size()]
 
 func get_tile_texture(index: int) -> Texture2D:
-	var key := "tile_%d" % index
+  var key := "tile_%d" % index
 	if _cache.has(key):
 		return _cache[key]
 	var sheet := _load_tex(TILE_SHEET_PATH)
@@ -71,4 +71,3 @@ func _load_tex(path: String) -> Texture2D:
 		push_warning("Missing image: " + path)
 	_cache[path] = tex
 	return tex
->>>>>>> Stashed changes

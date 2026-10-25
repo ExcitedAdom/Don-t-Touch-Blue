@@ -1,11 +1,6 @@
 extends Node
 
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+signal color_warning(next_color: int)
+signal color_changed(new_color: int)
+signal player_damaged(health: float)
+signal game_over(time_survived: float)
